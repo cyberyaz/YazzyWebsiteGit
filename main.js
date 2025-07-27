@@ -1,3 +1,4 @@
+// main.js
 // Wait until DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   // ——— 0) FADE-IN PANEL OPACITY ———
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
   // ——— 2) EMAILJS FORM HANDLING ———
-  emailjs.init('YOUR_EMAILJS_USER_ID'); // ← replace with your EmailJS user ID
+  emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // ← replace with your EmailJS public key
   const form = document.getElementById('contact-form');
   const status = form.querySelector('.status');
 
@@ -42,12 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = 'Sending…';
 
     emailjs
-      .sendForm('default_service', 'template_YOUR_TEMPLATE_ID', form) // ← replace template ID
+      .sendForm('service_s7zzc37', 'template_YOUR_TEMPLATE_ID', form) // ← replace with your EmailJS Template ID
       .then(() => {
         status.textContent = 'Message sent!';
         form.reset();
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('EmailJS error:', err);
         status.textContent = 'Oops, something went wrong.';
       });
   });

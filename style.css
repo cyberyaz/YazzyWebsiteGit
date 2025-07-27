@@ -290,6 +290,18 @@ button {
 
 /* — RESPONSIVE — */
 @media (max-width: 600px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("images/backgroundPhone.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: -1;        /* sits behind all your page content */
+    pointer-events: none; /* so taps pass through normally */
+  }
   .hero h1 {
     font-size: 2.5rem;
   }
