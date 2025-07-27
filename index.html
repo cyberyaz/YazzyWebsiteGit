@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yazzy</title>
+  <!-- FontAwesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVnKif4+1uXWx0zczn4+Uo3LXuW85M5H7bTFLyM6g+ZKXo5bYB+2D1Sw6SNVLl1wdyozso0mUXS+ge0b9ZfW3g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+  rel="icon"
+  href="images/favicon.png"
+  type="image/png"
+/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-overlay">
+        <h1>Yazzy</h1>
+        <div class="social">
+          <a href="https://www.instagram.com/yazzysimons/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq?si=1yeVQ8ZQTNuHQRMtULkALw" target="_blank"><i class="fab fa-spotify"></i></a>
+          <a href="https://www.linkedin.com/in/yazzysimons" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@yazzysimons" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+     <div class="social-icons hero-social">
+    <a href="https://www.instagram.com/yazzysimons/?hl=en" target="_blank" rel="noopener">
+      <img src="images/instagram.png" alt="Instagram" class="social-icon" />
+    </a>
+    <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank" rel="noopener">
+      <img src="images/facebook.png" alt="Facebook" class="social-icon" />
+    </a>
+    <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq?si=1yeVQ8ZQTNuHQRMtULkALw" target="_blank" rel="noopener">
+      <img src="images/spotify.png" alt="Spotify" class="social-icon" />
+    </a>
+    <a href="https://www.linkedin.com/in/yazzysimons" target="_blank" rel="noopener">
+      <img src="images/linkedin.png" alt="LinkedIn" class="social-icon" />
+    </a>
+    <a href="https://www.youtube.com/@yazzysimons" target="_blank" rel="noopener">
+      <img src="images/youtube.png" alt="YouTube" class="social-icon" />
+    </a>
+  </div>
+</section>
+
+    <!-- CONTENT -->
+    <section class="content reveal">
+      <div class="container">
+        <!-- ABOUT / BIO -->
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            Yazzy Simons is a vocalist and composer, blending soulful melodies
+            with cinematic textures. Based in Denver, the duo is recording their
+            debut release for later this year.
+          </p>
+        </section>
+
+        <!-- MUSIC -->
+        <section id="music">
+          <h2>Music</h2>
+          <div class="spotify-embeds">
+            <iframe
+              src="https://open.spotify.com/embed/track/6Ma6EVrctnFLHFUhyfYSLj"
+              loading="lazy"
+            ></iframe>
+            <iframe
+              src="https://open.spotify.com/embed/track/4jrcwOHr4UdIEpawTpCJRB"
+              loading="lazy"
+            ></iframe>
+          </div>
+<!-- YouTube Embeds -->
+<div class="youtube-embeds">
+  <!-- Main widescreen video -->
+  <iframe
+    src="https://www.youtube.com/embed/w0V8KK_Finw"
+    title="Official Music Video"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+
+  <!-- Shorts, with class="short" -->
+  <iframe
+    class="short"
+    src="https://www.youtube.com/embed/48Hn6MHPuw8?feature=share"
+    title="YouTube Short 1"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+
+  <iframe
+    class="short"
+    src="https://www.youtube.com/embed/YSFHPEP9DWU?feature=share"
+    title="YouTube Short 2"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+
+  <iframe
+    class="short"
+    src="https://www.youtube.com/embed/TKN8Zz_HsNo?feature=share"
+    title="YouTube Short 3"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+        </section>
+        
+
+        <!-- SHOWS -->
+        <section id="shows">
+          <h2>Upcoming Shows</h2>
+          <ul>
+            <li>Yazzy Duo — August 5, 2025 @ Salita</li>
+            <li>Yazzy Duo — August 21, 2025 @ Little Man Ice Cream</li>
+          </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <form id="contact-form" novalidate>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+            <p class="status" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

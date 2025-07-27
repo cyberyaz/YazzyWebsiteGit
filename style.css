@@ -1,0 +1,299 @@
+/* — Import Inter — */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
+/* — 1) Custom “Louis George Cafe” fonts — */
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('fonts/LouisGeorgeCafe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('fonts/LouisGeorgeCafe-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Use your custom font everywhere */
+  --font-sans: 'Louis George Cafe', sans-serif;
+
+  /* Colors & spacing */
+  --clr-primary: #c19a6b;
+  --clr-text: #222;
+  --spacing: 1rem;
+  --max-w: 500px;
+
+  /* Letter-spacing */
+  --body-tracking: 0.025em;
+  --heading-tracking: 0.05em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;               /* regular weight from your @font-face */
+  letter-spacing: var(--body-tracking);
+  color: var(--clr-text);
+
+  /* full-bleed, locked background */
+  background-color: #000;
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* — HERO — */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.hero h1,
+h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;               /* bold weight from your @font-face */
+  letter-spacing: var(--heading-tracking);
+}
+
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: var(--spacing);
+  transform: translateY(-200px);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+
+.hero-social {
+        position: absolute;
+        top: var(--spacing);
+        right: var(--spacing);
+        display: flex;
+        gap: 0.5rem;
+        transform: translate(-70px, 70px);
+}
+/* 3) Icon sizing and hover */
+.hero-social .social-icon {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        transition: transform 0.2s ease;
+}
+.hero-social .social-icon:hover {
+        transform: scale(1.1);
+}
+
+/* — HERO RESPONSIVE — */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.2rem;
+        transform: translateY(-80px);
+    }
+    .hero-social {
+        top: 0.5rem;
+        right: 0.5rem;
+        gap: 0.25rem;
+        transform: translate(-30px, 30px);
+    }
+    .hero-social .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.social a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 var(--spacing);
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: var(--clr-primary);
+}
+
+/* — CONTENT PANEL — */
+.content {
+  position: relative;
+  z-index: 1;
+
+  /* semi-transparent white, driven by scroll */
+  background: rgba(255, 255, 255, var(--panel-opacity, 0));
+  transition: background 0.2s ease-out;
+
+  /* pull the panel up over the hero */
+  margin-top: -20vh;
+  padding-top: 20vh;
+}
+
+@media (max-width: 600px) {
+  .content {
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: auto;
+  padding: 2rem var(--spacing);
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+/* — SCROLL-REVEAL — */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* — SPOTIFY EMBEDS (side by side & centered) — */
+.spotify-embeds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns side by side */
+    justify-content: center;
+    gap: var(--spacing);
+    margin-top: var(--spacing);
+}
+
+.spotify-embeds iframe {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 12/5; /* shorter and smaller */
+    height: 105px;      /* explicit height for short embeds */
+    border: none;
+    justify-self: center;
+}
+/* — YOUTUBE EMBEDS — */
+.youtube-embeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+/* Main widescreen video */
+.youtube-embeds > iframe:not(.short) {
+  flex: 1 1 500px;        /* grow to fill available space, min 500px */
+  max-width: 800px;       /* cap if container is very wide */
+  aspect-ratio: 16/9;
+}
+
+/* Shorts: phone-frame aspect */
+.youtube-embeds > iframe.short {
+  flex: 0 0 200px;        /* fixed width of 200px each */
+  max-width: 30%;         /* or adjust to fit exactly 3 across */
+  aspect-ratio: 9/16;     /* tall, vertical frame */
+  border: none;
+}
+
+/* Make sure they all obey the same borderless style */
+.youtube-embeds iframe {
+  border: none;
+}
+
+
+@media (max-width: 800px) {
+    .spotify-embeds {
+        grid-template-columns: 1fr; /* stack vertically on small screens */
+    }
+}
+
+
+
+/* — CONTACT FORM — */
+form {
+  display: grid;
+  gap: var(--spacing);
+}
+
+input,
+textarea {
+  font-family: var(--font-sans);
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  font-family: var(--font-sans);
+  padding: 0.75rem;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.status {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* — RESPONSIVE — */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .spotify-embeds {
+    grid-template-columns: 1fr;
+  }
+}
