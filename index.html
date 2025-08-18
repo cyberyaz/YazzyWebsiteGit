@@ -120,7 +120,6 @@
             <iframe src="https://open.spotify.com/embed/track/4jrcwOHr4UdIEpawTpCJRB" loading="lazy"></iframe>
           </div>
 
-          </div>
         </section>
 
 
@@ -128,19 +127,14 @@
         <!-- CONTACT -->
         <section id="contact">
           <h2>Contact</h2>
-          <form id="contact-form" novalidate>
-            <input type="email" name="reply_to" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-            <p class="status" role="status"></p>
-          </form>
-        </section>
-      </div>
-    </section>
-  </main>
+  <form id="contact-form">
+    <input type="text" name="from_name" placeholder="Your name" required>
+    <input type="email" name="reply_to" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+    <p class="status" role="status"></p>
+</section>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
