@@ -33,17 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-  // ——— 2) EMAILJS FORM HANDLING ———
-  emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // ← replace with your EmailJS public key
-  const form = document.getElementById('contact-form');
+  // ---- EMAILJS ----
+  emailjs.init({ publicKey: 'LTMepkSyKB00m6D14' });
+
+  const SERVICE_ID  = 'service_s7zzc37';
+  const TEMPLATE_ID = 'template_2bog4a9';
+
+  const form   = document.getElementById('contact-form');
   const status = form.querySelector('.status');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     status.textContent = 'Sending…';
 
-    emailjs
-      .sendForm('service_s7zzc37', 'template_YOUR_TEMPLATE_ID', form) // ← replace with your EmailJS Template ID
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
       .then(() => {
         status.textContent = 'Message sent!';
         form.reset();
