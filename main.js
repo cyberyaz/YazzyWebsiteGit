@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ——— 0) FADE-IN PANEL OPACITY ———
   const hero = document.querySelector('.hero');
   const panel = document.querySelector('.content');
-  const maxAlpha = 0.85; // final panel opacity
+  const maxAlpha = 1; // final panel opacity
 
   function updatePanelOpacity() {
     const scrollY = window.scrollY;

@@ -206,21 +206,21 @@ ul li {
 
 /* — SPOTIFY EMBEDS (side by side & centered) — */
 .spotify-embeds {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* two columns side by side */
-    justify-content: center;
-    gap: var(--spacing);
-    margin-top: var(--spacing);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem; /* reduced gap between embeds */
 }
 
 .spotify-embeds iframe {
-    width: 100%;
-    max-width: 250px;
-    aspect-ratio: 12/5; /* shorter and smaller */
-    height: 105px;      /* explicit height for short embeds */
-    border: none;
-    justify-self: center;
+  width: 75%;
+  max-width: 300px;
+  height: 80px;
+  border: none;
+  border-radius: 2px;
+  justify-self: center;
 }
+
 /* — YOUTUBE EMBEDS — */
 .youtube-embeds {
   display: flex;
@@ -252,10 +252,10 @@ ul li {
 }
 
 
-@media (max-width: 800px) {
-    .spotify-embeds {
-        grid-template-columns: 1fr; /* stack vertically on small screens */
-    }
+@media (max-width: 800px) { 
+  .spotify-embeds iframe {
+    max-width: 90%;
+  }
 }
 
 
@@ -309,7 +309,5 @@ button {
   .hero h1 {
     font-size: 2.5rem;
   }
-  .spotify-embeds {
-    grid-template-columns: 1fr;
-  }
+
 }
