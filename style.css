@@ -234,7 +234,7 @@ ul li {
 /* Main widescreen video */
 .youtube-embeds > iframe:not(.short) {
   flex: 1 1 500px;        /* grow to fill available space, min 500px */
-  max-width: 800px;       /* cap if container is very wide */
+  max-width: 1000px;       /* cap if container is very wide */
   aspect-ratio: 16/9;
 }
 
