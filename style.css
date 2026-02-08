@@ -16,10 +16,6 @@
   font-style: normal;
   font-display: swap;
 }
-td{
-  padding-left: 8px;
-  padding-top: 30px;
-}
 
 :root {
   /* Use your custom font everywhere */
@@ -45,10 +41,7 @@ td{
 html {
   scroll-behavior: smooth;
 }
-th{
-  font-weight: bold;
-  text-decoration: underline;
-}
+
 
 body {
   font-family: var(--font-sans);
