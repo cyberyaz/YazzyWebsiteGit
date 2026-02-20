@@ -5,166 +5,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yazzy</title>
-  <!-- FontAwesome for social icons -->
+
+  <!-- ═══ SEO ═══ -->
+  <title>Yazzy Simons | Bossa Nova & Jazz Vocalist · Denver, CO</title>
+  <meta name="description" content="Yazzy Simons is a Bossa Nova and jazz vocalist based in Denver, CO. Book Yazzy for live events, private shows, and vocal or guitar lessons. Upcoming performances and original music available now.">
+  <meta name="keywords" content="Yazzy Simons, jazz vocalist Denver, Bossa Nova Denver, Brazilian jazz Denver, live music Denver, book jazz singer, vocal lessons Denver, Spinning Jenny">
+  <meta name="author" content="Yazzy Simons">
+  <link rel="canonical" href="https://yazzy.co/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yazzy.co/">
+  <meta property="og:title" content="Yazzy Simons | Bossa Nova & Jazz Vocalist · Denver, CO">
+  <meta property="og:description" content="Vocalist and composer performing Bossa Nova, Swing, and R&B around Denver. Book shows, hear original music, and get in touch.">
+  <meta property="og:image" content="https://yazzy.co/images/background.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yazzy Simons | Bossa Nova & Jazz Vocalist · Denver, CO">
+  <meta name="twitter:description" content="Vocalist and composer performing Bossa Nova, Swing, and R&B around Denver.">
+  <meta name="twitter:image" content="https://yazzy.co/images/background.jpg">
+
+  <!-- Structured Data: Musician + Events -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Yazzy Simons",
+    "url": "https://yazzy.co",
+    "description": "Bossa Nova and jazz vocalist based in Denver, CO. Specializes in Bossa Nova, Swing, and modern R&B.",
+    "genre": ["Bossa Nova", "Jazz", "Swing", "R&B"],
+    "foundingLocation": { "@type": "Place", "name": "Denver, Colorado" },
+    "sameAs": [
+      "https://www.instagram.com/yazzysimons/",
+      "https://www.facebook.com/yasmin.simons.58/",
+      "https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq",
+      "https://www.linkedin.com/in/yazzysimons",
+      "https://www.youtube.com/@yazzysimons"
+    ],
+    "event": [
+      {
+        "@type": "MusicEvent",
+        "name": "Yazzy Recital",
+        "startDate": "2026-02-21T19:30:00-07:00",
+        "location": {
+          "@type": "Place",
+          "name": "Lamont School of Music – Williams Recital Salon",
+          "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO" }
+        },
+        "performer": { "@type": "Person", "name": "Yazzy Simons" }
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "Yazzy Duo",
+        "startDate": "2026-04-18T19:00:00-06:00",
+        "location": {
+          "@type": "Place",
+          "name": "Little Brazil",
+          "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO" }
+        },
+        "performer": { "@type": "Person", "name": "Yazzy Simons" }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-pVnKif4+1uXWx0zczn4+Uo3LXuW85M5H7bTFLyM6g+ZKXo5bYB+2D1Sw6SNVLl1wdyozso0mUXS+ge0b9ZfW3g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css">
 </head>
-<style>
-  td{
-  padding-left: 8px;
-  padding-top: 30px;
-}
-th{
-  font-weight: bold;
-  text-decoration: underline;
-}
-</style>
+
 <body>
+
+  <!-- ═══ STICKY NAV ═══ -->
+  <nav id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#contact" class="nav-cta">Book / Lessons</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
+
+    <!-- ═══ HERO ═══ -->
+    <section id="home" class="hero" aria-label="Hero">
       <div class="hero-overlay">
-        <h1>Yazzy</h1>
-        <div class="social">
-          <a href="https://www.instagram.com/yazzysimons/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq?si=XnADwHOpQ463YyMDe2LOfA" target="_blank"><i
-              class="fab fa-spotify"></i></a>
-          <a href="https://www.linkedin.com/in/yazzysimons" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.youtube.com/@yazzysimons" target="_blank"><i class="fab fa-youtube"></i></a>
+        <h1>Yazzy Simons</h1>
+        <p class="hero-tagline">Bossa Nova · Swing · R&amp;B · Denver, CO</p>
+        <a href="#contact" class="hero-btn">Book a Show</a>
+        <div class="hero-social" aria-label="Social media links">
+          <a href="https://www.instagram.com/yazzysimons/?hl=en" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq?si=M6yo73tkQkCZL11mgpnbkQ" target="_blank" rel="noopener" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+          <a href="https://www.linkedin.com/in/yazzysimons" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@yazzysimons" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="social-icons hero-social">
-        <a href="https://www.instagram.com/yazzysimons/?hl=en" target="_blank" rel="noopener">
-          <img src="images/instagram.png" alt="Instagram" class="social-icon" />
-        </a>
-        <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank" rel="noopener">
-          <img src="images/facebook.png" alt="Facebook" class="social-icon" />
-        </a>
-        <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq?si=M6yo73tkQkCZL11mgpnbkQ" target="_blank"
-          rel="noopener">
-          <img src="images/spotify.png" alt="Spotify" class="social-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/yazzysimons" target="_blank" rel="noopener">
-          <img src="images/linkedin.png" alt="LinkedIn" class="social-icon" />
-        </a>
-        <a href="https://www.youtube.com/@yazzysimons" target="_blank" rel="noopener">
-          <img src="images/youtube.png" alt="YouTube" class="social-icon" />
-        </a>
-      </div>
+      <div class="hero-scroll-hint" aria-hidden="true"><i class="fas fa-chevron-down"></i></div>
     </section>
 
-    <!-- CONTENT -->
+    <!-- ═══ CONTENT PANEL ═══ -->
     <section class="content reveal">
       <div class="container">
-        <!-- ABOUT / BIO -->
-        <section id="about" style="margin-top: -95px;">
-          <h2>About</h2>
+
+        <!-- ABOUT -->
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
           <p>Yazzy Simons is a vocalist and composer from the San Francisco Bay Area, now based in Denver. She
-            specializes in Bossa Nova, Swing and modern R&B. Yazzy is currently perusing vocal jazz studies at the
+            specializes in Bossa Nova, Swing, and modern R&amp;B. Yazzy is currently pursuing vocal jazz studies at the
             University of Denver under the guidance of Tatiana Mayfield, and performs around Denver with her Brazilian
             jazz duo alongside guitarist Kylan Fermin.</p>
           <br>
           <p>The pair share a love for the music of Jobim, João Gilberto, and Elis Regina, and bring their own take to
-            both familiar songs and lesser-known gems, focusing on exploring texture and form. The duo is currently
-            recording their debut release, set to be available later this year.</p>
+            both familiar songs and lesser-known gems, exploring texture and form. The duo is currently recording their
+            debut release, set to be available later this year.</p>
         </section>
-        <section id="music">
-          <div class="youtube-embeds" style="scale: 0.85;">
-            <iframe src="https://www.youtube.com/embed/2wgEoERo1qk" title="YouTube video player"
-              frameborder="0"
+
+        <!-- FEATURED VIDEO -->
+        <section aria-label="Featured performance">
+          <div class="youtube-embeds">
+            <iframe src="https://www.youtube.com/embed/2wgEoERo1qk"
+              title="Yazzy Simons – Featured Performance" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
+              allowfullscreen loading="lazy">
             </iframe>
-            
           </div>
         </section>
 
         <!-- SHOWS -->
-        <section id="shows">
-          <h2>Upcoming Shows</h2>
-          <table style="margin: 0 auto;">
-            <!-- <li>10/9/25 | Denver Botanic Gardens</li>
-            <li>11/7/25 | Balfour Riverfront Park</li>
-            <li>11/22/25 | Little Brazil</li>
-            <li>12/19/25 | Dazzle Denver</li> -->
-            <th>Group</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Time</th>
-            <tr>
-              <td>Yazzy Recital</td>
-              <td>Lamont School of Music - Williams Recital Salon</td>
-              <td>2.21.26</td>
-              <td>7:30pm</td>
-            </tr>
-            <tr>
-              <td>Yazzy Duo</td>
-              <td>Little Brazil</td>
-              <td>4.18.26</td>
-              <td>7:00pm</td>
-            </tr>
-          </table>
+        <section id="shows" aria-labelledby="shows-heading">
+          <h2 id="shows-heading">Upcoming Shows</h2>
+          <div class="shows-table-wrap">
+            <table class="shows-table">
+              <thead>
+                <tr>
+                  <th scope="col">Who</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Yazzy Recital</td>
+                  <td>Lamont School of Music<br><span class="venue-detail">Williams Recital Salon · Denver</span></td>
+                  <td><time datetime="2026-02-21">Feb 21, 2026</time></td>
+                  <td>7:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Yazzy Duo</td>
+                  <td>Little Brazil<br><span class="venue-detail">Denver</span></td>
+                  <td><time datetime="2026-04-18">Apr 18, 2026</time></td>
+                  <td>7:00 pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="shows-cta-note">Want Yazzy at your venue? <a href="#contact">Get in touch →</a></p>
         </section>
-        <section id="music">
-          <div class="youtube-embeds">
-            <iframe class="short" src="https://www.youtube.com/embed/gielRDY_E2k?feature=share" title="YouTube Short 5"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          <iframe class="short" src="https://www.youtube.com/embed/JYJnJ-pdrno" title="YouTube Short 5"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-              <iframe class="short" src="https://www.youtube.com/embed/48Hn6MHPuw8?feature=share" title="YouTube Short 1"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+
+        <!-- SHORTS -->
+        <section aria-label="Live clips">
+          <div class="youtube-embeds shorts-row">
+            <iframe class="short" src="https://www.youtube.com/embed/gielRDY_E2k"
+              title="Yazzy Simons – Live clip 1" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="short" src="https://www.youtube.com/embed/JYJnJ-pdrno"
+              title="Yazzy Simons – Live clip 2" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="short" src="https://www.youtube.com/embed/48Hn6MHPuw8"
+              title="Yazzy Simons – Live clip 3" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
 
-        <!-- MUSIC -->
-        <section id="music">
-          <h2>Spinning Jenny</h2>
-          <!-- YouTube Embeds -->
+        <!-- MUSIC / SPINNING JENNY -->
+        <section id="music" aria-labelledby="music-heading">
+          <h2 id="music-heading">Spinning Jenny</h2>
+          <p class="section-subtitle">Yazzy's original project — hear it on Spotify and YouTube.</p>
           <div class="youtube-embeds">
-            <!-- Shorts -->
-           
-
-            <iframe style="scale: 0.85"; src="https://www.youtube.com/embed/5N2_DGMLPlc?si=lPgHCHCLy8RS2GUY" title="YouTube video player"
-              frameborder="0"
+            <iframe src="https://www.youtube.com/embed/5N2_DGMLPlc?si=lPgHCHCLy8RS2GUY"
+              title="Spinning Jenny – Official Video" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
             </iframe>
-            <div class="spotify-embeds">
-              <iframe src="https://open.spotify.com/embed/track/6Ma6EVrctnFLHFUhyfYSLj" loading="lazy"></iframe>
-              <iframe src="https://open.spotify.com/embed/track/4jrcwOHr4UdIEpawTpCJRB" loading="lazy"
-                style="margin-bottom:20px;"></iframe>
-            </div>
-
+          </div>
+          <div class="spotify-embeds">
+            <iframe src="https://open.spotify.com/embed/track/6Ma6EVrctnFLHFUhyfYSLj"
+              title="Spinning Jenny on Spotify" loading="lazy"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/4jrcwOHr4UdIEpawTpCJRB"
+              title="Spinning Jenny – Track 2 on Spotify" loading="lazy"></iframe>
+          </div>
         </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script src="main.js"></script>
         <!-- CONTACT -->
-        <section id="contact">
-          <h2>Contact</h2>
-            <p>If you'd like to book us for an event or take guiar or voice lessons please let us know below</p>
-            <div style="height: 20px;"></div>
-          <form id="contact-form">
-            <input type="text" name="from_name" placeholder="Your name" required>
-            <input type="email" name="reply_to" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-            <p class="status" role="status"></p>
+        <section id="contact" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Book &amp; Lessons</h2>
+          <p class="section-subtitle">Interested in booking the duo for a private event, restaurant, or venue?
+            Want vocal or guitar lessons? Drop a message below.</p>
+          <div style="height:20px;"></div>
+          <form id="contact-form" novalidate>
+            <input type="text" name="from_name" placeholder="Your name" required autocomplete="name">
+            <input type="email" name="reply_to" placeholder="Your email" required autocomplete="email">
+            <textarea name="message" rows="5"
+              placeholder="Tell us about your event or what you're looking for" required></textarea>
+            <button type="submit">Send Message</button>
+            <p class="status" role="status" aria-live="polite"></p>
           </form>
         </section>
 
+      </div>
+    </section>
 
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Yazzy Simons</p>
+      <p class="footer-tagline">Bossa Nova · Jazz · Denver, CO</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/yazzysimons/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/yasmin.simons.58/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://open.spotify.com/artist/7gnxVCyVrZrWA6AIQxf3Kq" target="_blank" rel="noopener" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.youtube.com/@yazzysimons" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="footer-copy">&copy; <span id="yr"></span> Yazzy Simons. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="main.js"></script>
 </body>
-
 </html>
