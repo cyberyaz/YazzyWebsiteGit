@@ -123,9 +123,21 @@
       <div class="hero-scroll-hint" aria-hidden="true"><i class="fas fa-chevron-down"></i></div>
     </section>
 
+       
+
     <!-- ═══ CONTENT PANEL ═══ -->
     <section class="content reveal">
       <div class="container">
+
+        <!-- FEATURED VIDEO -->
+        <section aria-label="Featured performance">
+          <div class="youtube-embeds">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bgQCa4DtT60?si=rDCNQfH2lVX1K4vn"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
 
         <!-- ABOUT -->
         <section id="about" aria-labelledby="about-heading">
@@ -140,13 +152,14 @@
             debut release, set to be available later this year.</p>
         </section>
 
-        <!-- FEATURED VIDEO -->
-        <section aria-label="Featured performance">
-          <div class="youtube-embeds">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bgQCa4DtT60?si=rDCNQfH2lVX1K4vn"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <!-- VIDEO PLAYER: Corcovado -->
+        <section aria-label="Corcovado Video">
+          <!-- iPhone aspect ratio: 9:16, keep height 315px, width = 315 * 9 / 16 = 177.1875 -->
+          <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <video controls width="177" height="315" poster="corcovado-poster.jpg" style="aspect-ratio:9/16;">
+              <source src="corcovado.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
 
@@ -205,16 +218,16 @@
           <h2 id="venues-heading">Past Venues</h2>
           <p class="section-subtitle">Yazzy and her duo have performed across Denver at:</p>
           <ul class="venues-list">
-            <li>Nocturne</li>
-            <li>Dazzle</li>
-            <li>Denver Botanic Gardens</li>
-            <li>Balfour Riverfront Park</li>
-            <li>Little Brazil</li>
-            <li>Cheluna Brewing</li>
-            <li>Salita</li>
-            <li>Rosetta Hall</li>
-            <li>Family Jones Spirit House</li>
-            <li>Little Man Ice Cream</li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Nocturne</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Dazzle</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Denver Botanic Gardens</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Balfour Riverfront Park</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Little Brazil</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Cheluna Brewing</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Salita</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Rosetta Hall</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Family Jones Spirit House</a></li>
+            <li><a href="#" style="color:inherit; text-decoration:none;">Little Man Ice Cream</a></li>
             
             <li>License No. 1</li>
             <li>Denver Public Library — Latino Community Service Awards</li>
